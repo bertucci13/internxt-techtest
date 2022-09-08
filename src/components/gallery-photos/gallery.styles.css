@@ -1,0 +1,71 @@
+.gallery {
+  display: grid;
+  gap: 0.13rem;
+  padding: 0.13rem;
+  grid-template-columns: repeat(auto-fill, minmax(9.75rem, 1fr));
+  grid-template-rows: repeat(2, auto 0.1875rem auto);
+}
+
+@media screen and (min-width: 834px) {
+  .gallery {
+    grid-template-columns: repeat(4, minmax(10.88rem, 1fr));
+    grid-template-rows: repeat(2, auto 2.1456rem);
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-rows: repeat(3, auto 3.25rem);
+    gap: 2rem;
+    padding: 2rem;
+  }
+}
+
+.card {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  grid-row: span 2;
+}
+
+.card-image {
+  block-size: 100%;
+  margin: 0;
+  transition: 0.4s ease-out;
+  -webkit-transition: 0.4s ease-out;
+  -moz-transition: 0.4s ease-out;
+  -ms-transition: 0.4s ease-out;
+  -o-transition: 0.4s ease-out;
+}
+
+.card-image img {
+  block-size: 100%;
+  inline-size: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+  transition: 0.4s ease-out;
+}
+.card-image img:hover {
+  transform: scale(1.15);
+  cursor: pointer;
+}
+
+.pagination {
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+}
+
+.pagination div {
+  padding: 0.1em 1em 0.1em;
+}
